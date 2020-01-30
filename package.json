@@ -1,5 +1,5 @@
 {
-  "name": "tracker",
+  "name": "who_knows_me",
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
