@@ -1,4 +1,6 @@
-require 'test_helper'
+# frozen_string_literal: true
+
+require "test_helper"
 
 class MerchantsControllerTest < ActionDispatch::IntegrationTest
   setup do
@@ -16,8 +18,8 @@ class MerchantsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create merchant" do
-    assert_difference('Merchant.count') do
-      post merchants_url, params: { merchant: {  } }
+    assert_difference("Merchant.count") do
+      post merchants_url, params: { merchant: {} }
     end
 
     assert_redirected_to merchant_url(Merchant.last)
@@ -34,12 +36,12 @@ class MerchantsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update merchant" do
-    patch merchant_url(@merchant), params: { merchant: {  } }
+    patch merchant_url(@merchant), params: { merchant: {} }
     assert_redirected_to merchant_url(@merchant)
   end
 
   test "should destroy merchant" do
-    assert_difference('Merchant.count', -1) do
+    assert_difference("Merchant.count", -1) do
       delete merchant_url(@merchant)
     end
 

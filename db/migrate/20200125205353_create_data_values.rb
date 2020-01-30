@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateDataValues < ActiveRecord::Migration[6.0]
   def change
     create_table :data_values do |t|
@@ -9,6 +11,6 @@ class CreateDataValues < ActiveRecord::Migration[6.0]
       t.timestamps
     end
 
-    add_index :data_values, [:user_id, :name], unique:true
+    add_index :data_values, [:user_id, :name], unique: true
   end
 end

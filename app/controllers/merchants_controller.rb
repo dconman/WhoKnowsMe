@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MerchantsController < ApplicationController
   before_action :set_merchant, only: [:show, :edit, :update, :destroy]
 
@@ -28,7 +30,7 @@ class MerchantsController < ApplicationController
 
     respond_to do |format|
       if @merchant.save
-        format.html { redirect_to @merchant, notice: 'Merchant was successfully created.' }
+        format.html { redirect_to @merchant, notice: "Merchant was successfully created." }
         format.json { render :show, status: :created, location: @merchant }
       else
         format.html { render :new }
@@ -42,7 +44,7 @@ class MerchantsController < ApplicationController
   def update
     respond_to do |format|
       if @merchant.update(merchant_params)
-        format.html { redirect_to @merchant, notice: 'Merchant was successfully updated.' }
+        format.html { redirect_to @merchant, notice: "Merchant was successfully updated." }
         format.json { render :show, status: :ok, location: @merchant }
       else
         format.html { render :edit }
@@ -56,7 +58,7 @@ class MerchantsController < ApplicationController
   def destroy
     @merchant.destroy
     respond_to do |format|
-      format.html { redirect_to merchants_url, notice: 'Merchant was successfully destroyed.' }
+      format.html { redirect_to merchants_url, notice: "Merchant was successfully destroyed." }
       format.json { head :no_content }
     end
   end

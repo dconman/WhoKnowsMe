@@ -1,4 +1,6 @@
-require 'test_helper'
+# frozen_string_literal: true
+
+require "test_helper"
 
 class DataValuesControllerTest < ActionDispatch::IntegrationTest
   setup do
@@ -16,8 +18,8 @@ class DataValuesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create data_value" do
-    assert_difference('DataValue.count') do
-      post data_values_url, params: { data_value: {  } }
+    assert_difference("DataValue.count") do
+      post data_values_url, params: { data_value: {} }
     end
 
     assert_redirected_to data_value_url(DataValue.last)
@@ -34,12 +36,12 @@ class DataValuesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update data_value" do
-    patch data_value_url(@data_value), params: { data_value: {  } }
+    patch data_value_url(@data_value), params: { data_value: {} }
     assert_redirected_to data_value_url(@data_value)
   end
 
   test "should destroy data_value" do
-    assert_difference('DataValue.count', -1) do
+    assert_difference("DataValue.count", -1) do
       delete data_value_url(@data_value)
     end
 

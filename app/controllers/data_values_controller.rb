@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DataValuesController < ApplicationController
   before_action :set_data_value, only: [:show, :edit, :update, :destroy]
 
@@ -28,7 +30,7 @@ class DataValuesController < ApplicationController
 
     respond_to do |format|
       if @data_value.save
-        format.html { redirect_to @data_value, notice: 'Data value was successfully created.' }
+        format.html { redirect_to @data_value, notice: "Data value was successfully created." }
         format.json { render :show, status: :created, location: @data_value }
       else
         format.html { render :new }
@@ -42,7 +44,7 @@ class DataValuesController < ApplicationController
   def update
     respond_to do |format|
       if @data_value.update(data_value_params)
-        format.html { redirect_to @data_value, notice: 'Data value was successfully updated.' }
+        format.html { redirect_to @data_value, notice: "Data value was successfully updated." }
         format.json { render :show, status: :ok, location: @data_value }
       else
         format.html { render :edit }
@@ -56,7 +58,7 @@ class DataValuesController < ApplicationController
   def destroy
     @data_value.destroy
     respond_to do |format|
-      format.html { redirect_to data_values_url, notice: 'Data value was successfully destroyed.' }
+      format.html { redirect_to data_values_url, notice: "Data value was successfully destroyed." }
       format.json { head :no_content }
     end
   end
